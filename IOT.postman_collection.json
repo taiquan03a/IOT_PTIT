@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "5d1fc190-bd73-4959-93b8-4391b715e4a3",
+		"name": "IOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30294856",
+		"_collection_link": "https://winter-rocket-368309.postman.co/workspace/Personal-Workspace~3373c6e4-ef12-4fd2-8494-f41621064c0c/collection/30294856-5d1fc190-bd73-4959-93b8-4391b715e4a3?action=share&source=collection_link&creator=30294856"
+	},
+	"item": [
+		{
+			"name": "send message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/device/control?action=onLed4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"control"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "onLed4"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "API gửi các action bật tắt đèn với param action"
+			},
+			"response": []
+		},
+		{
+			"name": "chart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/device/chart",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"chart"
+					]
+				},
+				"description": "API nhận về các giá trị của biểu đồ giá trị các cảm biến"
+			},
+			"response": []
+		},
+		{
+			"name": "get page data sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/device/page?page=0&size=10&sortBy=random&direction=desc&searchBy=temperature&searchValue=27.7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"page"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "random"
+						},
+						{
+							"key": "direction",
+							"value": "desc"
+						},
+						{
+							"key": "searchBy",
+							"value": "temperature"
+						},
+						{
+							"key": "searchValue",
+							"value": "27.7"
+						}
+					]
+				},
+				"description": "API trang data sensor nhận về cái giá trị của sensor"
+			},
+			"response": []
+		},
+		{
+			"name": "device values",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/device/values",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"values"
+					]
+				},
+				"description": "API trả về giá trị hiện tại của các cảm biến"
+			},
+			"response": []
+		},
+		{
+			"name": "get page history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/api/action/page?page=0&size=10&sortBy=id&direction=desc&searchBy=time&searchValue=23:56:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"action",
+						"page"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "direction",
+							"value": "desc"
+						},
+						{
+							"key": "searchBy",
+							"value": "time"
+						},
+						{
+							"key": "searchValue",
+							"value": "23:56:00"
+						}
+					]
+				},
+				"description": "API trả về lịch sử bật tắt thiết bị"
+			},
+			"response": []
+		},
+		{
+			"name": "count random",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/device/count",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chart random",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/device/chartRandom",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"chartRandom"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
